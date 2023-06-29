@@ -2,26 +2,29 @@ import react from "react";
 import Card from "./Card";
 
 export default function Forecast(props){
-
-    let forecast_data=Array.of(props.forecast[0],props.forecast[1],props.forecast[2],props.forecast[3],props.forecast[4],props.forecast[5]);
-    // console.log(forecast_data[0].app_max_temp);
+    // let [x,setx] =react.useState(0);
+    // console.log((props.clouds[0]));
+    // let forecast_data=Array.of(props.forecast[0],props.forecast[1],props.forecast[2],props.forecast[3],props.forecast[4]);
+    // console.log(props.forecast[0]);
     return(
         <div className="forecast">
             <div className="Card_title">
                 <h3>Date</h3>
-                <div className="inCard">
-                <p>Temperature</p>
-                <p>Rain</p>
-                <p>Wind Speed</p>
+                <div className="inCard" id="inCard_">
+                <p>Temperature (°c)</p>
+                <p>Rain (mm)</p>
+                <p>Wind Speed(Km/hr)</p>
                 <p>Direction</p>
-                <p>clouds</p>
-                <p>Condition</p>
+                <p>clouds (%)</p>
+                {/* <p>{props.clouds[0]}</p> */}
                 </div>
                 
             </div>
-            {/* {forecast_data.map((x,index) => {
-            })} */}
-            <Card   temp={props.forecast[0].temp} clouds={props.forecast[0].clouds} wind_cdir_full={props.forecast[0].wind_cdir_full} wind_spd={props.forecast[0].wind_spd} precip={props.forecast[0].precip} />
+            {[1,2,3,4,5,6,7,8,9].map((x,index) => {
+                   return <Card  id={x} datetime={props.datetime[x]} temp={props.temps[x]} clouds={props.clouds[x]} wind_cdir_full={props.wind_cdir_full[x]} wind_spd={props.wind_spd[x]} precip={props.precip[x]} />
+            } )}
+            
+            
             
         </div>
     );

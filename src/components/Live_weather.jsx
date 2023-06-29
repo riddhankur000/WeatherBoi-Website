@@ -5,13 +5,21 @@ import { useEffect } from "react";
 import Today from "./Today";
 
 export default function Live_weather(props){
-  
+
+    let [swtch,setswitch]=react.useState(false);
     let [weather_data,setdata]= react.useState({});
     let [forecast,setforecast]= react.useState({});
     let [location,setlocation]= react.useState({});
     let [gmt,setgmt]= react.useState({});
     let [json_gmt,setjson_gmt]= react.useState({});
     let [des,setdes]= react.useState("");
+    let [temps,settemps]=react.useState([]);
+    let [datetime,setdatetime]=react.useState([])
+          let [wind_spd,setwind_spd]=react.useState([])
+          let [wind_cdir_full,setwind_cdir_full]=react.useState([])
+          let [precip,setprecip]=react.useState([])
+          let [clouds,setclouds]=react.useState([])
+   
 
 
     useEffect(() => {
@@ -758,7 +766,16 @@ export default function Live_weather(props){
               "state_code": "28",
               "timezone": "Asia/Kolkata"
           }
+
+          
             setforecast(json2.data);
+            settemps(json2.data.map((x) => {return x.temp}));
+            setdatetime(json2.data.map((x) => {return x.datetime}));
+            setclouds(json2.data.map((x) => {return x.clouds}));
+            setwind_cdir_full(json2.data.map((x) => {return x.wind_cdir_full}));
+            setwind_spd(json2.data.map((x) => {return x.wind_spd}));
+            setprecip(json2.data.map((x) => {return x.precip}));
+            
             
             // const url3 = "https://api.weatherbit.io/v2.0/current?lat=" +lat + "&lon=" + lon + "&key=01bb1717d29c4b3e9237758adee97bec&include=minutely";
             // const response3 = await fetch(url3);
@@ -828,21 +845,29 @@ export default function Live_weather(props){
     }, []);
 
     console.log(weather_data);
-    console.log(forecast);
+    // console.log(forecast[0].weather);
     console.log(location);
     console.log(gmt);
-    console.log(forecast.sunrise_ts);
-    // console.log(json_.data[0]);
+    // console.log(temps[0]);
+    console.log(datetime);
+    console.log(clouds);
+    console.log(precip);
+    // console.log((forecast.clouds));
 
     // const des=Object.values(weather_data.weather);
     // console.log(typeof(weather_data.weather));
 
-
+    
     return(
         <div className="live_weather">
             <Heading weather_data={weather_data} forecast={forecast[0]} city_name={location.name} date_time={json_gmt.date_time_txt} timezone={json_gmt.timezone} gmt={String(gmt)} des={des}/>
+            <div className="switch">
+                <div className="switch_" style={{background: !swtch? "rgba(255,255,255,1)":"rgba(255,255,255, 0.05)", color: !swtch? "rgb(22, 143, 151)":"rgb(186, 246, 255)"} } onClick={() => {setswitch(!swtch)}}>Today</div>
+                <div className="switch_" style={{background: swtch? "rgba(255,255,255,1)":"rgba(255,255,255, 0.05)", color: swtch? "rgb(22, 143, 151)":"rgb(186, 246, 255)"}} onClick={() => {setswitch(!swtch)}}>Next 10 Days</div>
+            </div>
+            {!swtch?<Today weather_data={weather_data} forecast={forecast} gmt={gmt}/>:<Forecast datetime={datetime} temps={temps} wind_spd={wind_spd} wind_cdir_full={wind_cdir_full} clouds={clouds} precip={precip}/>}
             {/* <Today weather_data={weather_data} forecast={forecast} gmt={gmt}/> */}
-            <Forecast forecast={forecast}/>
+            
             
         </div>
     );
