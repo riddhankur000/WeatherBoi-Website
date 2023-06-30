@@ -1,10 +1,13 @@
 import react from "react";
+import { Outlet, Link } from "react-router-dom";
 
-export default function Header(){
+export default function Header(props){
 
     return(
         <div className="header">
-            <div className="title"><h1>Weatherboi</h1></div>
+            {/* <Link to="/"> */}
+            <div className="title"><h1 onClick={()=>{props.updateclicked();}}>Weatherboi</h1></div>
+            {/* </Link> */}
         </div>
     );
 }

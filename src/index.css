@@ -14,7 +14,10 @@ code {
     monospace;
 }
 
-
+html{
+  width: 100vw;
+  height: 100vh;
+}
 
 .main{
   
@@ -29,6 +32,10 @@ code {
 .title{
   padding: 20px 50px;
   color: rgb(225, 255, 255);
+}
+
+.title h1:hover{
+  cursor: pointer;
 }
 
 .body{
@@ -159,8 +166,8 @@ code {
 }
 
 .p2{
-  margin: 5px -10px;
-  transform: translateX(-70px) translateY(-35px);
+  /* margin: 5px -10px; */
+  transform: translateY(-40px);
 }
 
 .p2 p{
@@ -180,7 +187,7 @@ code {
   margin: 20px;
   font-size: 25px;
   font-weight: bolder;
-  margin-left: 20vw;
+  margin-left: auto;
   
   
 }
@@ -453,3 +460,49 @@ code {
   letter-spacing: 1px;
 }
 
+.header{
+  display: flex;
+  align-items: center;
+
+}
+
+.nav{
+  display: flex;
+  padding: 5px 20vw;
+  align-items: center;
+  transform: translateY(15px);
+}
+
+.page{
+  margin: 15px;
+  font-size: 22px;
+  font-weight: 600;
+  color: aliceblue;
+  border-radius: 5px;
+  transition: 0.3s;
+  padding: 10px;
+}
+
+.page:hover{
+  cursor: pointer;
+  color: rgb(26, 166, 176);
+  background: rgba(255,255,255, 0.1)
+}
+
+#search{
+  width: 25vw;
+}
+
+#btn{
+  width: 25%;
+}
+
+.about1{
+  font-size: 18px;
+  margin: 10px 15vw;
+  padding: 10px;
+  color: aliceblue;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: justify;
+}

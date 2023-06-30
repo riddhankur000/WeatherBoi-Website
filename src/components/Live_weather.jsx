@@ -6,6 +6,7 @@ import Today from "./Today";
 
 export default function Live_weather(props){
 
+    // let [value,setvalue]=react.useState(props.value);
     let [swtch,setswitch]=react.useState(false);
     let [weather_data,setdata]= react.useState({});
     let [forecast,setforecast]= react.useState({});
@@ -21,7 +22,7 @@ export default function Live_weather(props){
           let [clouds,setclouds]=react.useState([])
    
 
-
+          
     useEffect(() => {
       
       
@@ -31,7 +32,7 @@ export default function Live_weather(props){
             const response1 = await fetch(url1);
             const json1 = await response1.json();
             
-            
+            console.log(json1);
             const lat=((json1[0].lat).toString());
             const lon=((json1[0].lon).toString());
             setlocation(json1[0]);
@@ -768,7 +769,7 @@ export default function Live_weather(props){
           }
 
           
-            setforecast(json2.data);
+            setforecast(json2.data[0]);
             settemps(json2.data.map((x) => {return x.temp}));
             setdatetime(json2.data.map((x) => {return x.datetime}));
             setclouds(json2.data.map((x) => {return x.clouds}));
@@ -842,16 +843,18 @@ export default function Live_weather(props){
         };
     
         fetchData();
-    }, []);
+    }, [props.useeff]);
 
-    console.log(weather_data);
-    // console.log(forecast[0].weather);
-    console.log(location);
-    console.log(gmt);
-    // console.log(temps[0]);
-    console.log(datetime);
-    console.log(clouds);
-    console.log(precip);
+    console.log(props.value);
+    console.log(props.useeff);
+    // console.log(weather_data);
+    // // console.log(forecast[0].weather);
+    // console.log(location);
+    // console.log(gmt);
+    // // console.log(temps[0]);
+    // console.log(datetime);
+    // console.log(clouds);
+    // console.log(precip);
     // console.log((forecast.clouds));
 
     // const des=Object.values(weather_data.weather);
@@ -860,7 +863,7 @@ export default function Live_weather(props){
     
     return(
         <div className="live_weather">
-            <Heading weather_data={weather_data} forecast={forecast[0]} city_name={location.name} date_time={json_gmt.date_time_txt} timezone={json_gmt.timezone} gmt={String(gmt)} des={des}/>
+            <Heading weather_data={weather_data} forecast={forecast} city_name={location.name} date_time={json_gmt.date_time_txt} timezone={json_gmt.timezone} gmt={String(gmt)} des={des}/>
             <div className="switch">
                 <div className="switch_" style={{background: !swtch? "rgba(255,255,255,1)":"rgba(255,255,255, 0.05)", color: !swtch? "rgb(22, 143, 151)":"rgb(186, 246, 255)"} } onClick={() => {setswitch(!swtch)}}>Today</div>
                 <div className="switch_" style={{background: swtch? "rgba(255,255,255,1)":"rgba(255,255,255, 0.05)", color: swtch? "rgb(22, 143, 151)":"rgb(186, 246, 255)"}} onClick={() => {setswitch(!swtch)}}>Next 10 Days</div>
