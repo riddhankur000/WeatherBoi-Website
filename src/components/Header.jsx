@@ -6,7 +6,7 @@ export default function Header(props){
     return(
         <div className="header">
             {/* <Link to="/"> */}
-            <div className="title"><h1 onClick={()=>{props.updateclicked();}}>Weatherboi</h1></div>
+            <div className="title"><h1 onClick={()=>{props.updateclicked(); props.updatehome();}}>Weatherboi</h1></div>
             {/* </Link> */}
         </div>
     );

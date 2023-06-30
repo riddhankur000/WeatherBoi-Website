@@ -28,7 +28,7 @@ export default function App(){
 return(
   <div className='main'>
     <div className='header'>
-      <Header updateclicked={()=>{setclicked(false)}}/>
+      <Header updateclicked={()=>{setclicked(false)}} updatehome={()=>{sethome(true)}}/>
         <div className='nav'>
           <div className="page" onClick={() => {sethome(true)}}>Home</div>
           <div className="page" onClick={() => {sethome(false)}}>About</div>

@@ -2,7 +2,7 @@ import react from "react";
 
 export default function About() {
     return (
-        <div>
+        <div className="main_about">
             <p className="about1">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome to Weatherboi website, your go-to source for accurate and up-to-date 

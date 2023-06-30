@@ -9,7 +9,7 @@ export default function Card(props){
                     <p>{props.temp}</p>
                     <p>{props.precip}</p>
                     <p>{props.wind_spd}</p>
-                    <p>{props.wind_cdir_full}</p>
+                    <p className="wnd_dir">{props.wind_cdir_full}</p>
                     <p>{props.clouds}</p>
                     {/* <p>Condition</p> */}
                 </div>

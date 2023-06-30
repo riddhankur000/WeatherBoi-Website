@@ -8,6 +8,7 @@ export default function Forecast(props){
     // console.log(props.forecast[0]);
     return(
         <div className="forecast">
+            <div>
             <div className="Card_title">
                 <h3>Date</h3>
                 <div className="inCard" id="inCard_">
@@ -20,9 +21,14 @@ export default function Forecast(props){
                 </div>
                 
             </div>
+            </div>
+            
+            <div className="makescroll">
             {[1,2,3,4,5,6,7,8,9].map((x,index) => {
                    return <Card  id={x} datetime={props.datetime[x]} temp={props.temps[x]} clouds={props.clouds[x]} wind_cdir_full={props.wind_cdir_full[x]} wind_spd={props.wind_spd[x]} precip={props.precip[x]} />
             } )}
+            </div>
+            
             
             
             
