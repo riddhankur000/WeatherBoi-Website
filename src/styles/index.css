@@ -590,9 +590,24 @@ code {
     align-items: center;
     justify-content: center;
   }
+  .typewriter{
+    width: max-content;
+    /* font-size: 20px; */
+    
+  }
 }
 
 @media only screen and (max-width: 1000px) and (min-width: 600px) {
+
+  .search{
+    width: 60vw;
+    height: 25px;
+  }
+
+  .btn{
+    width: 20%;
+    height: 140%;
+  }
   
   .header{
     flex-wrap: wrap;
@@ -708,12 +723,27 @@ code {
     justify-content: center;
   }
 
+  .typewriter{
+    width: max-content;
+    /* font-size: 20px; */
+    
+  }
 
 }
 
 
 @media only screen and (max-width: 700px) and (min-width: 600px) {
   
+  .search{
+    width: 80vw;
+    height: 25px;
+  }
+
+  .btn{
+    width: 25%;
+    height: 140%;
+  }
+
   .header{
     flex-wrap: wrap;
     justify-content: center;
@@ -835,11 +865,27 @@ code {
     font-size: 18px;
     line-height: 28px;
   }
+
+  .typewriter{
+    width: max-content;
+    /* font-size: 20px; */
+    
+  }
 }
 
 
 
 @media only screen and (max-width: 600px) and (min-width: 425px) {
+
+  .search{
+    width: 80vw;
+    height: 25px;
+  }
+
+  .btn{
+    width: 35%;
+    height: 140%;
+  }
   
   .header{
     flex-wrap: wrap;
@@ -972,10 +1018,25 @@ code {
     font-size: 15px;
     line-height: 25px;
   }
+
+  .typewriter{
+    width: max-content;
+    font-size: 20px;
+    
+  }
 }
 
 
 @media only screen and (max-width: 425px) and (min-width: 320px) {
+  .search{
+    width: 80vw;
+    height: 25px;
+  }
+
+  .btn{
+    width: 30%;
+    height: 140%;
+  }
   
   .header{
     flex-wrap: wrap;
@@ -1126,4 +1187,10 @@ code {
     font-size: 12px;
     line-height: 18px;
   }
+  .typewriter{
+    width: max-content;
+    font-size: 20px;
+    
+  }
+  
 }
