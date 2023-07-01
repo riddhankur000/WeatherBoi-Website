@@ -380,10 +380,17 @@ code {
 }
 
 .p1 h2{
+  display: flex;
+  justify-content: space-around;
   font-size: 50px;
   letter-spacing: 2px;
   margin: 10px 5px;
   
+}
+
+.p1 h2 div{
+  padding: 10px;
+  transform: scale(1.4);
 }
 
 .today{
@@ -528,6 +535,10 @@ code {
   align-items: center;
 }
 
+.w_code{
+  transform:scale(3) translateY(0.3vh)scaleX(1.2);
+}
+
 
 
 
@@ -595,6 +606,9 @@ code {
     /* font-size: 20px; */
     
   }
+  .w_code{
+    transform:scale(3.2) translateY(1.2vh);
+  }
 }
 
 @media only screen and (max-width: 1000px) and (min-width: 600px) {
@@ -638,6 +652,7 @@ code {
 
   .p1 h2{
     font-size: 40px;
+    
   }
   .p2{
     width: 30vw;
@@ -727,6 +742,10 @@ code {
     width: max-content;
     /* font-size: 20px; */
     
+  }
+
+  .w_code{
+    transform:scale(3.5) translateY(1.2vh);
   }
 
 }
@@ -870,6 +889,10 @@ code {
     width: max-content;
     /* font-size: 20px; */
     
+  }
+
+  .w_code{
+    transform:scale(3) translateY(1.2vh);
   }
 }
 
@@ -1023,6 +1046,10 @@ code {
     width: max-content;
     font-size: 20px;
     
+  }
+
+  .w_code{
+    transform:scale(3) translateY(1.2vh);
   }
 }
 
@@ -1191,6 +1218,9 @@ code {
     width: max-content;
     font-size: 20px;
     
+  }
+  .w_code{
+    transform:scale(3) translateY(1.2vh);
   }
   
 }

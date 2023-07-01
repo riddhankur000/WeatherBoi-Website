@@ -13,10 +13,12 @@ export default function Forecast(props){
                 <h3>Date</h3>
                 <div className="inCard" id="inCard_">
                 <p>Temperature (°c)</p>
+                <p>Condition</p>
                 <p>Rain (mm)</p>
                 <p>Wind Speed(Km/hr)</p>
                 <p>Direction</p>
                 <p>clouds (%)</p>
+                <p>Description</p>
                 {/* <p>{props.clouds[0]}</p> */}
                 </div>
                 
@@ -25,7 +27,7 @@ export default function Forecast(props){
             
             <div className="makescroll">
             {[1,2,3,4,5,6,7,8,9].map((x,index) => {
-                   return <Card  id={x} datetime={props.datetime[x]} temp={props.temps[x]} clouds={props.clouds[x]} wind_cdir_full={props.wind_cdir_full[x]} wind_spd={props.wind_spd[x]} precip={props.precip[x]} />
+                   return <Card  id={x} datetime={props.datetime[x]} temp={props.temps[x]} clouds={props.clouds[x]} wind_cdir_full={props.wind_cdir_full[x]} wind_spd={props.wind_spd[x]} precip={props.precip[x]} descrptn={props.descrptn[x]} w_code={props.w_code[x]}/>
             } )}
             </div>
             
