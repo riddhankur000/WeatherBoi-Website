@@ -1,7 +1,7 @@
 import react from "react";
 import { Typewriter } from "react-simple-typewriter";
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 export default function Body(props){
 

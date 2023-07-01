@@ -32,7 +32,7 @@ export default function App(){
     function updateclicked(value){
         // sethome(true);
         
-        value!=""?setclicked(true):setclicked(false);
+        value!==""?setclicked(true):setclicked(false);
         setvalue(value);
     }
 
