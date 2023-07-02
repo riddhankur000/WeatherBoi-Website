@@ -31,7 +31,7 @@ export default function Live_weather(props){
       
       const fetchData = async () => {
         try {
-            const url1 = ("http://api.openweathermap.org/geo/1.0/direct?q=" + props.value + "&appid=3f947f745642a1d0d389e9823bbf0dfc");
+            const url1 = ("https://api.openweathermap.org/geo/1.0/direct?q=" + props.value + "&appid=3f947f745642a1d0d389e9823bbf0dfc");
             const response1 = await fetch(url1);
             const json1 = await response1.json();
             
