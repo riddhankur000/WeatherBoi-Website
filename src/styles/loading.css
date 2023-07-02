@@ -43,3 +43,10 @@
         /* letter-spacing: 2px; */
     }
 }
+
+
+@media only screen and (max-width: 750px) and (min-width: 320px){
+    .loading h1{
+        font-size: 17px;
+    }
+}

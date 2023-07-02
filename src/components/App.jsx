@@ -46,8 +46,8 @@ return(
     <div className='header'>
       <Header updateclicked={()=>{setclicked(false); setloading(!loading);}} updatehome={()=>{sethome(true)}}/>
         <div className='nav'>
-          <div className="page" onClick={() => {sethome(true)}}>Home</div>
-          <div className="page" onClick={() => {sethome(false)}}>About</div>
+          <div className="page"  style={{color:(home)?"rgb(46, 203, 215)":"aliceblue"}} onClick={() => {sethome(true)}}>Home</div>
+          <div className="page"  style={{color:(home)?"aliceblue":"rgb(46, 203, 215)"}} onClick={() => {sethome(false)}}>About</div>
         </div>
         {(clicked)?
           <div className="search" id="search">
