@@ -851,7 +851,7 @@ export default function Live_weather(props){
         fetchData();
     }, [props.useeff]);
 
-    // ,gmt, setclouds, setcode, setdata, setdatetime, setdes, setdescription, setforecast, setgmt, setjson_gmt, setlocation, setprecip, settemps, setw_code, setwind_cdir_full, setwind_spd
+    // ,gmt, setclouds, setcode, setdata, setdatetime, setdes, setdescription, setforecast, setgmt, setjson_gmt, setlocation, setprecip, settemps, setw_code, setwind_cdir_full, 
 
     // console.log(props.value);
     // console.log(props.useeff);
