@@ -37,7 +37,7 @@ export default function Heading(props){
             </div>
             <div className="p2">
                 {/* <div id="icon"><img src={iconurl} alt="" /></div> */}
-                <p>{props.weather_data.app_temp} °C</p>
+                <p>{props.weather_data.temp} °C</p>
                 {/* <h3>{true?"Day":"Night"}</h3> */}
                 <h3>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
             </div>

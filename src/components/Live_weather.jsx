@@ -40,7 +40,7 @@ export default function Live_weather(props){
             const lon=((json1[0].lon).toString());
             setlocation(json1[0]);
             
-            const url_gmt = ("https://api.ipgeolocation.io/timezone?apiKey=9bce9a527eb9437d96407ea632e974ea&lat="+lat+"&long=" + lon);
+            const url_gmt = ("https://api.ipgeolocation.io/timezone?apiKey=1b1b98b9c12c47fe8cd5ede7375ce5ea&lat="+lat+"&long=" + lon);
             const response_gmt = await fetch(url_gmt);
             const json_gmt = await response_gmt.json();
             const zone = json_gmt.timezone;
@@ -53,7 +53,7 @@ export default function Live_weather(props){
             setgmt(json_gmt_.utc_offset);
             console.log(gmt);
 
-            const url2 = "https://api.weatherbit.io/v2.0/forecast/daily?lat=" +lat + "&lon=" + lon + "&key=9bce9a527eb9437d96407ea632e974ea";
+            const url2 = "https://api.weatherbit.io/v2.0/forecast/daily?lat=" +lat + "&lon=" + lon + "&key=3e380f51946f4d71b718136099be1726";
             const response2 = await fetch(url2);
             const json2 = await response2.json();
         //     const json2 = {
@@ -783,7 +783,7 @@ export default function Live_weather(props){
             setw_code(json2.data.map((x) => {return x.weather.code}));
             
             
-            const url3 = "https://api.weatherbit.io/v2.0/current?lat=" +lat + "&lon=" + lon + "&key=01bb1717d29c4b3e9237758adee97bec&include=minutely";
+            const url3 = "https://api.weatherbit.io/v2.0/current?lat=" +lat + "&lon=" + lon + "&key=3e380f51946f4d71b718136099be1726&include=minutely";
             const response3 = await fetch(url3);
             const json3 = await response3.json();
             
