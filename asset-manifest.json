@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/WeatherBoi-Website/static/css/main.a4e3d781.css",
-    "main.js": "/WeatherBoi-Website/static/js/main.012fc468.js",
+    "main.js": "/WeatherBoi-Website/static/js/main.7100c749.js",
     "static/media/arora.jpg": "/WeatherBoi-Website/static/media/arora.6280dd5d32f2d2b0b6e0.jpg",
     "index.html": "/WeatherBoi-Website/index.html",
     "main.a4e3d781.css.map": "/WeatherBoi-Website/static/css/main.a4e3d781.css.map",
-    "main.012fc468.js.map": "/WeatherBoi-Website/static/js/main.012fc468.js.map"
+    "main.7100c749.js.map": "/WeatherBoi-Website/static/js/main.7100c749.js.map"
   },
   "entrypoints": [
     "static/css/main.a4e3d781.css",
-    "static/js/main.012fc468.js"
+    "static/js/main.7100c749.js"
   ]
 }
